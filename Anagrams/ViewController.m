@@ -9,11 +9,23 @@
 #import "config.h"
 #import "ViewController.h"
 #import "Level.h"
+#import "GameController.h"
 
 @interface ViewController ()
+@property (strong, nonatomic) GameController* controller;
 @end
 
 @implementation ViewController
+
+-(instancetype)initWithCoder:(NSCoder *)decoder
+{
+    self = [super initWithCoder:decoder];
+    if (self != nil) {
+        //create the game controller
+        self.controller = [[GameController alloc] init];
+    }
+    return self;
+}
 
 //setup the view and instantiate the game controller
 - (void)viewDidLoad
