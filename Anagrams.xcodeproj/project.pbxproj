@@ -20,6 +20,7 @@
 		9C64845016DF500E004CB058 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C64844F16DF500E004CB058 /* GameController.m */; };
 		9C64845316DF50D8004CB058 /* TileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C64845216DF50D8004CB058 /* TileView.m */; };
 		9C64845616DF51E6004CB058 /* TargetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C64845516DF51E6004CB058 /* TargetView.m */; };
+		9C64845916DF53AE004CB058 /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C64845816DF53AE004CB058 /* AudioController.m */; };
 		9C96FD7416D3D407009F7882 /* level2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C96FD7316D3D407009F7882 /* level2.plist */; };
 		9C96FD7616D3D40E009F7882 /* level3.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C96FD7516D3D40E009F7882 /* level3.plist */; };
 		9CA374CA16D5825500B075C1 /* credits.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9CA374C916D5825500B075C1 /* credits.txt */; };
@@ -63,6 +64,8 @@
 		9C64845216DF50D8004CB058 /* TileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TileView.m; sourceTree = "<group>"; };
 		9C64845416DF51E6004CB058 /* TargetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetView.h; sourceTree = "<group>"; };
 		9C64845516DF51E6004CB058 /* TargetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetView.m; sourceTree = "<group>"; };
+		9C64845716DF53AE004CB058 /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioController.h; sourceTree = "<group>"; };
+		9C64845816DF53AE004CB058 /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioController.m; sourceTree = "<group>"; };
 		9C96FD7316D3D407009F7882 /* level2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level2.plist; sourceTree = "<group>"; };
 		9C96FD7516D3D40E009F7882 /* level3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level3.plist; sourceTree = "<group>"; };
 		9CA374C916D5825500B075C1 /* credits.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = credits.txt; sourceTree = "<group>"; };
@@ -166,6 +169,8 @@
 			children = (
 				9C64844E16DF500E004CB058 /* GameController.h */,
 				9C64844F16DF500E004CB058 /* GameController.m */,
+				9C64845716DF53AE004CB058 /* AudioController.h */,
+				9C64845816DF53AE004CB058 /* AudioController.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -364,6 +369,7 @@
 				9C64845016DF500E004CB058 /* GameController.m in Sources */,
 				9C64845316DF50D8004CB058 /* TileView.m in Sources */,
 				9C64845616DF51E6004CB058 /* TargetView.m in Sources */,
+				9C64845916DF53AE004CB058 /* AudioController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

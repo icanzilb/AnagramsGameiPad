@@ -15,6 +15,13 @@
 //add more definitions here
 #define kTileMargin 20
 
+//audio defines
+#define kSoundDing  @"ding.mp3"
+#define kSoundWrong @"wrong.m4a"
+#define kSoundWin   @"win.mp3"
+
+#define kAudioEffectFiles @[kSoundDing, kSoundWrong, kSoundWin]
+
 
 //handy math functions
 #define rad2deg(x) x * 180 / M_PI
