@@ -23,6 +23,7 @@
 		9C64845916DF53AE004CB058 /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C64845816DF53AE004CB058 /* AudioController.m */; };
 		9C64845C16DF544C004CB058 /* StopwatchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C64845B16DF544C004CB058 /* StopwatchView.m */; };
 		9C64845F16DF54A6004CB058 /* HUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C64845E16DF54A5004CB058 /* HUDView.m */; };
+		9C64846216DFB15F004CB058 /* GameData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C64846116DFB15F004CB058 /* GameData.m */; };
 		9C96FD7416D3D407009F7882 /* level2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C96FD7316D3D407009F7882 /* level2.plist */; };
 		9C96FD7616D3D40E009F7882 /* level3.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C96FD7516D3D40E009F7882 /* level3.plist */; };
 		9CA374CA16D5825500B075C1 /* credits.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9CA374C916D5825500B075C1 /* credits.txt */; };
@@ -72,6 +73,8 @@
 		9C64845B16DF544C004CB058 /* StopwatchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopwatchView.m; sourceTree = "<group>"; };
 		9C64845D16DF54A5004CB058 /* HUDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDView.h; sourceTree = "<group>"; };
 		9C64845E16DF54A5004CB058 /* HUDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDView.m; sourceTree = "<group>"; };
+		9C64846016DFB15F004CB058 /* GameData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameData.h; sourceTree = "<group>"; };
+		9C64846116DFB15F004CB058 /* GameData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameData.m; sourceTree = "<group>"; };
 		9C96FD7316D3D407009F7882 /* level2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level2.plist; sourceTree = "<group>"; };
 		9C96FD7516D3D40E009F7882 /* level3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level3.plist; sourceTree = "<group>"; };
 		9CA374C916D5825500B075C1 /* credits.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = credits.txt; sourceTree = "<group>"; };
@@ -201,6 +204,8 @@
 			children = (
 				9C64844B16DF4FA8004CB058 /* Level.h */,
 				9C64844C16DF4FA8004CB058 /* Level.m */,
+				9C64846016DFB15F004CB058 /* GameData.h */,
+				9C64846116DFB15F004CB058 /* GameData.m */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -382,6 +387,7 @@
 				9C64845916DF53AE004CB058 /* AudioController.m in Sources */,
 				9C64845C16DF544C004CB058 /* StopwatchView.m in Sources */,
 				9C64845F16DF54A6004CB058 /* HUDView.m in Sources */,
+				9C64846216DFB15F004CB058 /* GameData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
