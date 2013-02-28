@@ -35,6 +35,18 @@
     hud.gamePoints.textColor = [UIColor colorWithRed:0.38 green:0.098 blue:0.035 alpha:1] /*#611909*/;
     [hud addSubview: hud.gamePoints];
     
+    //load the button image
+    UIImage* image = [UIImage imageNamed:@"btn"];
+    
+    //the help button
+    hud.btnHelp = [UIButton buttonWithType:UIButtonTypeCustom];
+    [hud.btnHelp setTitle:@"Hint!" forState:UIControlStateNormal];
+    hud.btnHelp.titleLabel.font = kFontHUD;
+    [hud.btnHelp setBackgroundImage:image forState:UIControlStateNormal];
+    hud.btnHelp.frame = CGRectMake(50, 30, image.size.width, image.size.height);
+    hud.btnHelp.alpha = 0.8;
+    [hud addSubview: hud.btnHelp];
+    
     return hud;
 }
 
