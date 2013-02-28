@@ -10,6 +10,7 @@
 #import "Level.h"
 
 #import "TileView.h"
+#import "AudioController.h"
 
 @interface GameController : NSObject<TileDragDelegateProtocol>
 
@@ -18,6 +19,8 @@
 
 //the current level
 @property (strong, nonatomic) Level* level;
+
+@property (strong, nonatomic) AudioController* audioController;
 
 //display a new anagram on the screen
 -(void)dealRandomAnagram;

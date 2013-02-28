@@ -18,6 +18,18 @@
     NSMutableArray* _targets;
 }
 
+//iniitialize the game controller
+-(instancetype)init
+{
+    self = [super init];
+    if (self != nil) {
+        //initialize
+        self.audioController = [[AudioController alloc] init];
+        [self.audioController preloadAudioEffects: kAudioEffectFiles];
+    }
+    return self;
+}
+
 //fetches a random anagram, deals the letter tiles and creates the targets
 -(void)dealRandomAnagram
 {
