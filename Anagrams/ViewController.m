@@ -33,8 +33,6 @@
 {
     [super viewDidLoad];
     
-    Level* level1 = [Level levelWithNum:1];
-    
     //add one layer for all game elements
     UIView* gameLayer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
     [self.view addSubview: gameLayer];
@@ -45,10 +43,7 @@
     HUDView* hudView = [HUDView viewWithRect:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
     [self.view addSubview:hudView];
     
-    self.controller.hud = hudView;
-    
-    self.controller.level = level1;
-    [self.controller dealRandomAnagram];
+    self.controller.hud = hudView;    
 }
 
 //show tha game menu on app start
