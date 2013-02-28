@@ -149,6 +149,12 @@
 
 -(void)checkForSuccess
 {
+    for (TargetView* t in _targets) {
+        //no success, bail out
+        if (t.isMatched==NO) return;
+    }
+    
+    //the game has finished, do more stuff
     
 }
 
