@@ -12,10 +12,13 @@
 #import "TileView.h"
 #import "AudioController.h"
 
+#import "HUDView.h"
+
 @interface GameController : NSObject<TileDragDelegateProtocol>
 
 //the view to add game elements to
 @property (weak, nonatomic) UIView* gameView;
+@property (weak, nonatomic) HUDView* hud;
 
 //the current level
 @property (strong, nonatomic) Level* level;
