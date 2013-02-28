@@ -104,6 +104,33 @@
     self.layer.shadowOpacity = 0.8;
 }
 
+//move the tile under the user finger
+-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    CGPoint pt = [[touches anyObject] locationInView:self.superview];
+    self.center = CGPointMake(pt.x - _xOffset, pt.y - _yOffset);
+}
+
+//reset the view transoform in case drag is cancelled
+-(void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [UIView animateWithDuration:0.3 animations:^{
+        self.transform = tempTransform;
+        self.layer.shadowOpacity = 0.0;
+    }];
+}
+
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    CGPoint pt = [[touches anyObject] locationInView:self.superview];
+    self.center = CGPointMake(pt.x - _xOffset, pt.y - _yOffset);
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        self.transform = tempTransform;
+        self.layer.shadowOpacity = 0.0;
+    }];
+}
+
 
 
 @end
