@@ -43,7 +43,12 @@
     HUDView* hudView = [HUDView viewWithRect:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
     [self.view addSubview:hudView];
     
-    self.controller.hud = hudView;    
+    self.controller.hud = hudView;
+    
+    __weak ViewController* weakSelf = self;
+    self.controller.onAnagramSolved = ^(){
+        [weakSelf showLevelMenu];
+    };
 }
 
 //show tha game menu on app start

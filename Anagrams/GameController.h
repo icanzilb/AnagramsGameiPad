@@ -15,6 +15,9 @@
 #import "HUDView.h"
 #import "GameData.h"
 
+//just under the imports at the top
+typedef void (^CallbackBlock)();
+
 @interface GameController : NSObject<TileDragDelegateProtocol>
 
 //the view to add game elements to
@@ -26,8 +29,9 @@
 //keep the score
 @property (strong, nonatomic) GameData* data;
 
-
 @property (strong, nonatomic) AudioController* audioController;
+
+@property (strong, nonatomic) CallbackBlock onAnagramSolved;
 
 //display a new anagram on the screen
 -(void)dealRandomAnagram;

@@ -190,6 +190,17 @@
     
 }
 
+//clear the tiles and targets
+-(void)clearBoard
+{
+    [_tiles removeAllObjects];
+    [_targets removeAllObjects];
+    
+    for (UIView *view in self.gameView.subviews) {
+        [view removeFromSuperview];
+    }
+}
+
 -(void)checkForSuccess
 {
     for (TargetView* t in _targets) {
@@ -226,6 +237,9 @@
                          [stars removeFromSuperview];
                          
                          //game finished
+                         //when animation is finished, show menu
+                         [self clearBoard];
+                         self.onAnagramSolved();
                          
                      }];
     
