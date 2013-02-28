@@ -15,6 +15,7 @@
 {
     //create the hud layer
     HUDView* hud = [[HUDView alloc] initWithFrame:r];
+    hud.userInteractionEnabled = NO;
     
     //the stopwatch
     hud.stopwatch = [[StopwatchView alloc] initWithFrame: CGRectMake(kScreenWidth/2-150, 0, 300, 100)];

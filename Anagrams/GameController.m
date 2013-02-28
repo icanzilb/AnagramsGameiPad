@@ -16,6 +16,10 @@
     //tile lists
     NSMutableArray* _tiles;
     NSMutableArray* _targets;
+    
+    //stopwatch variables
+    int _secondsLeft;
+    NSTimer* _timer;
 }
 
 //iniitialize the game controller
@@ -89,6 +93,10 @@
             [_targets addObject: target];
         }
     }
+    
+    //start the timer
+    [self startStopwatch];
+    
     
 }
 
@@ -173,8 +181,42 @@
     //the anagram is completed!
     [self.audioController playEffect:kSoundWin];
     
-    
+    //stop the stopwatch
+    [self stopStopwatch];
 }
+
+-(void)startStopwatch
+{
+    //initialize the timer HUD
+    _secondsLeft = self.level.timeToSolve;
+    [self.hud.stopwatch setSeconds:_secondsLeft];
+    
+    //schedule a new timer
+    _timer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                              target:self
+                                            selector:@selector(tick:)
+                                            userInfo:nil
+                                             repeats:YES];
+}
+
+//stop the watch
+-(void)stopStopwatch
+{
+    [_timer invalidate];
+    _timer = nil;
+}
+
+//stopwatch on tick
+-(void)tick:(NSTimer*)timer
+{
+    _secondsLeft --;
+    [self.hud.stopwatch setSeconds:_secondsLeft];
+    
+    if (_secondsLeft==0) {
+        [self stopStopwatch];
+    }
+}
+
 
 
 @end
