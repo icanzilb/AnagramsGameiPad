@@ -123,6 +123,32 @@
     
 }
 
+//place a tile on the place of a target with an explosion
+-(void)placeTile:(TileView*)tileView atTarget:(TargetView*)targetView
+{
+    //1 hide the taget
+    targetView.hidden = YES;
+    targetView.isMatched = YES;
+    
+    //2 align the tile
+    tileView.isMatched = YES;
+    tileView.center = targetView.center;
+    tileView.userInteractionEnabled = NO;
+    
+    //3 scale down to normal tile size
+    [UIView animateWithDuration:0.35
+                          delay:0.00
+                        options:UIViewAnimationOptionCurveEaseOut
+                     animations:^{
+                         tileView.transform = CGAffineTransformIdentity;
+                     } completion:nil];
+    
+}
+
+-(void)checkForSuccess
+{
+    
+}
 
 
 @end
