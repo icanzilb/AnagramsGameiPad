@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "Level.h"
 
-@interface GameController : NSObject
+#import "TileView.h"
+
+@interface GameController : NSObject<TileDragDelegateProtocol>
 
 //the view to add game elements to
 @property (weak, nonatomic) UIView* gameView;

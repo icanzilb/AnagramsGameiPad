@@ -76,7 +76,53 @@
         }
     }
     
+}
+
+//a tile was dragged, check if matches a target
+-(void)tileView:(TileView*)tileView didDragToPoint:(CGPoint)pt
+{
+    TargetView* targetView = nil;
+    
+    for (TargetView* tv in _targets) {
+        if (CGRectContainsPoint(tv.frame, pt)) {
+            targetView = tv;
+            break;
+        }
+    }
+    
+    //check if target was found
+    if (targetView!=nil) {
+        
+        //check if letter matches
+        if ([targetView.letter isEqualToString: tileView.letter]) {
+            
+            //adjust view on spot
+            [self placeTile:tileView atTarget:targetView];
+            
+            //more successful stuff to do
+            
+            //check for game end
+            [self checkForSuccess];
+            
+        } else {
+            
+            //visualize the mistake
+            [tileView randomize];
+            [UIView animateWithDuration:0.35
+                                  delay:0.00
+                                options:UIViewAnimationOptionCurveEaseOut
+                             animations:^{
+                                 tileView.center = CGPointMake(tileView.center.x + randomf(-20,20), tileView.center.y + randomf(20, 30));
+                             } completion:nil];
+            
+            //more wrong stuff to do
+            
+        }
+    }
+    
     
 }
+
+
 
 @end
