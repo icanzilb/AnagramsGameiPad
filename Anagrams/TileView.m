@@ -129,6 +129,10 @@
         self.transform = tempTransform;
         self.layer.shadowOpacity = 0.0;
     }];
+    
+    if (self.dragDelegate) {
+        [self.dragDelegate tileView:self didDragToPoint:self.center];
+    }
 }
 
 
