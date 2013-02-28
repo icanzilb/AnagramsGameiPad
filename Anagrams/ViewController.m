@@ -40,6 +40,8 @@
     
     self.controller.gameView = gameLayer;
     
+    self.controller.level = level1;
+    [self.controller dealRandomAnagram];
 }
 
 //show tha game menu on app start
