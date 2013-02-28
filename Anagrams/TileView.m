@@ -39,6 +39,22 @@
         self.frame = CGRectMake(0,0,img.size.width*scale, img.size.height*scale);
         
         //more innitialization
+        
+        //add a letter on top
+        UILabel* lblChar = [[UILabel alloc] initWithFrame:self.bounds];
+        lblChar.textAlignment = NSTextAlignmentCenter;
+        lblChar.textColor = [UIColor whiteColor];
+        lblChar.backgroundColor = [UIColor clearColor];
+        lblChar.text = [letter uppercaseString];
+        lblChar.font = [UIFont fontWithName:@"Verdana-Bold" size:78.0*scale];
+        [self addSubview: lblChar];
+        
+        //enable user interaction
+        self.userInteractionEnabled = YES;
+        self.isMatched = NO;
+        
+        //save the letter
+        _letter = letter;
     }
     
     return self;
