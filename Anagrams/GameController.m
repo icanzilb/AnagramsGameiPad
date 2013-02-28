@@ -56,6 +56,8 @@
             TileView* tile = [[TileView alloc] initWithLetter:letter andSideLength:tileSide];
             tile.center = CGPointMake(xOffset + i*(tileSide + kTileMargin), kScreenHeight/4*3);
             [tile randomize];
+
+            tile.dragDelegate = self;
             
             [self.gameView addSubview:tile];
             [_tiles addObject: tile];
