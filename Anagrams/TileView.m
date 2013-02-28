@@ -13,7 +13,8 @@
 //1
 @implementation TileView
 {
-    
+    int _xOffset, _yOffset;
+    CGAffineTransform tempTransform;    
 }
 
 //2
@@ -55,6 +56,18 @@
         
         //save the letter
         _letter = letter;
+        
+        //create the tile shadow
+        self.layer.shadowColor = [UIColor blackColor].CGColor;
+        self.layer.shadowOpacity = 0;
+        self.layer.shadowOffset = CGSizeMake(10.0f, 10.0f);
+        self.layer.shadowRadius = 15.0f;
+        self.layer.masksToBounds = NO;
+        
+        UIBezierPath *path = [UIBezierPath bezierPathWithRect:self.bounds];
+        self.layer.shadowPath = path.CGPath;
+        
+        
     }
     
     return self;
@@ -72,5 +85,25 @@
     int yOffset = (arc4random() % 10) - 10;
     self.center = CGPointMake(self.center.x, self.center.y + yOffset);
 }
+
+#pragma mark - draggin the tile
+//store the initial offset of the user finger from the tile center
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    CGPoint pt = [[touches anyObject] locationInView:self];
+    _xOffset = pt.x - self.frame.size.width/2;
+    _yOffset = pt.y - self.frame.size.height/2;
+    
+    //save the current transform
+    tempTransform = self.transform;
+    
+    //enlarge the tile
+    self.transform = CGAffineTransformScale(self.transform, 1.2, 1.2);
+    
+    //show the drop shadow
+    self.layer.shadowOpacity = 0.8;
+}
+
+
 
 @end
