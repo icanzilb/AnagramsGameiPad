@@ -26,6 +26,7 @@
 		9C64846216DFB15F004CB058 /* GameData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C64846116DFB15F004CB058 /* GameData.m */; };
 		9C64846516DFB203004CB058 /* CounterLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C64846416DFB203004CB058 /* CounterLabelView.m */; };
 		9C64846816DFB328004CB058 /* ExplodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C64846716DFB328004CB058 /* ExplodeView.m */; };
+		9C64846B16DFB41E004CB058 /* StarDustView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C64846A16DFB41E004CB058 /* StarDustView.m */; };
 		9C96FD7416D3D407009F7882 /* level2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C96FD7316D3D407009F7882 /* level2.plist */; };
 		9C96FD7616D3D40E009F7882 /* level3.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C96FD7516D3D40E009F7882 /* level3.plist */; };
 		9CA374CA16D5825500B075C1 /* credits.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9CA374C916D5825500B075C1 /* credits.txt */; };
@@ -81,6 +82,8 @@
 		9C64846416DFB203004CB058 /* CounterLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterLabelView.m; sourceTree = "<group>"; };
 		9C64846616DFB328004CB058 /* ExplodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExplodeView.h; sourceTree = "<group>"; };
 		9C64846716DFB328004CB058 /* ExplodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExplodeView.m; sourceTree = "<group>"; };
+		9C64846916DFB41E004CB058 /* StarDustView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarDustView.h; sourceTree = "<group>"; };
+		9C64846A16DFB41E004CB058 /* StarDustView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarDustView.m; sourceTree = "<group>"; };
 		9C96FD7316D3D407009F7882 /* level2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level2.plist; sourceTree = "<group>"; };
 		9C96FD7516D3D40E009F7882 /* level3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level3.plist; sourceTree = "<group>"; };
 		9CA374C916D5825500B075C1 /* credits.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = credits.txt; sourceTree = "<group>"; };
@@ -205,6 +208,8 @@
 				9C64846416DFB203004CB058 /* CounterLabelView.m */,
 				9C64846616DFB328004CB058 /* ExplodeView.h */,
 				9C64846716DFB328004CB058 /* ExplodeView.m */,
+				9C64846916DFB41E004CB058 /* StarDustView.h */,
+				9C64846A16DFB41E004CB058 /* StarDustView.m */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -400,6 +405,7 @@
 				9C64846216DFB15F004CB058 /* GameData.m in Sources */,
 				9C64846516DFB203004CB058 /* CounterLabelView.m in Sources */,
 				9C64846816DFB328004CB058 /* ExplodeView.m in Sources */,
+				9C64846B16DFB41E004CB058 /* StarDustView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
