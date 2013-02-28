@@ -33,7 +33,13 @@
     [super viewDidLoad];
     
     Level* level1 = [Level levelWithNum:1];
-    NSLog(@"anagrams: %@", level1.anagrams);
+    
+    //add one layer for all game elements
+    UIView* gameLayer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
+    [self.view addSubview: gameLayer];
+    
+    self.controller.gameView = gameLayer;
+    
 }
 
 //show tha game menu on app start
