@@ -114,6 +114,7 @@
             [self placeTile:tileView atTarget:targetView];
             
             //more successful stuff to do
+            [self.audioController playEffect: kSoundDing];
             
             //check for game end
             [self checkForSuccess];
@@ -130,6 +131,7 @@
                              } completion:nil];
             
             //more wrong stuff to do
+            [self.audioController playEffect:kSoundWrong];
             
         }
     }
@@ -167,6 +169,10 @@
     }
     
     //the game has finished, do more stuff
+    
+    //the anagram is completed!
+    [self.audioController playEffect:kSoundWin];
+    
     
 }
 
