@@ -13,6 +13,7 @@
 #define kScreenHeight [UIScreen mainScreen].bounds.size.width
 
 //add more definitions here
+#define kTileMargin 20
 
 
 //handy math functions
