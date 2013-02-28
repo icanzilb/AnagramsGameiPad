@@ -129,6 +129,8 @@
             
             //give points
             self.data.points += self.level.pointsPerTile;
+            [self.hud.gamePoints countTo: self.data.points
+                               totalTime: 3];
             
             //check for game end
             [self checkForSuccess];
@@ -149,6 +151,9 @@
             
             //take out points
             self.data.points -= self.level.pointsPerTile/2;
+            [self.hud.gamePoints countTo: self.data.points
+                               totalTime: 1.5];
+            
         }
     }
     
