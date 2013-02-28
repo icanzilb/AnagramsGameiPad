@@ -16,6 +16,7 @@
 		9C2695E816D27CBC0019199F /* particle.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C2695E716D27CBC0019199F /* particle.png */; };
 		9C2695F616D291E70019199F /* level1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C2695F516D291E70019199F /* level1.plist */; };
 		9C2695F816D295520019199F /* wrong.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 9C2695F716D295520019199F /* wrong.m4a */; };
+		9C64844D16DF4FA8004CB058 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C64844C16DF4FA8004CB058 /* Level.m */; };
 		9C96FD7416D3D407009F7882 /* level2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C96FD7316D3D407009F7882 /* level2.plist */; };
 		9C96FD7616D3D40E009F7882 /* level3.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C96FD7516D3D40E009F7882 /* level3.plist */; };
 		9CA374CA16D5825500B075C1 /* credits.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9CA374C916D5825500B075C1 /* credits.txt */; };
@@ -51,6 +52,8 @@
 		9C2695E716D27CBC0019199F /* particle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = particle.png; sourceTree = "<group>"; };
 		9C2695F516D291E70019199F /* level1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level1.plist; sourceTree = "<group>"; };
 		9C2695F716D295520019199F /* wrong.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = wrong.m4a; sourceTree = "<group>"; };
+		9C64844B16DF4FA8004CB058 /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
+		9C64844C16DF4FA8004CB058 /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
 		9C96FD7316D3D407009F7882 /* level2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level2.plist; sourceTree = "<group>"; };
 		9C96FD7516D3D40E009F7882 /* level3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level3.plist; sourceTree = "<group>"; };
 		9CA374C916D5825500B075C1 /* credits.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = credits.txt; sourceTree = "<group>"; };
@@ -166,6 +169,8 @@
 		9C96FD7216D3C02D009F7882 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				9C64844B16DF4FA8004CB058 /* Level.h */,
+				9C64844C16DF4FA8004CB058 /* Level.m */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -340,6 +345,7 @@
 				9CCA40AD16CFD85A00B16E42 /* main.m in Sources */,
 				9CCA40B116CFD85A00B16E42 /* AppDelegate.m in Sources */,
 				9CCA40BD16CFD85A00B16E42 /* ViewController.m in Sources */,
+				9C64844D16DF4FA8004CB058 /* Level.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
