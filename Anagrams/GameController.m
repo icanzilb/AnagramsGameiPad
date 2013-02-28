@@ -274,6 +274,51 @@
 -(void)actionHint
 {
     NSLog(@"Help!");
+    
+    //1 disable the button temporarily
+    self.hud.btnHelp.enabled = NO;
+    
+    //2 give a hint to the user + penilize them
+    self.data.points -= self.level.pointsPerTile/2;
+    [self.hud.gamePoints countTo: self.data.points
+                       totalTime: 1.5];
+    
+    //3 find the first target, not matched yet
+    TargetView* target = nil;
+    for (TargetView* t in _targets) {
+        if (t.isMatched==NO) {
+            target = t;
+            break;
+        }
+    }
+    
+    //4 find the first tile, matching the target
+    TileView* tile = nil;
+    for (TileView* t in _tiles) {
+        if (t.isMatched==NO && [t.letter isEqualToString:target.letter]) {
+            tile = t;
+            break;
+        }
+    }
+    
+    //show the animation to the user
+    [UIView animateWithDuration:1.5
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseOut
+                     animations:^{
+                         tile.center = target.center;
+                     } completion:^(BOOL finished) {
+                         //5 adjust view on spot
+                         [self placeTile:tile atTarget:target];
+                         
+                         //6 check for finished game
+                         [self checkForSuccess];
+                         
+                         //7 re-enable the button
+                         self.hud.btnHelp.enabled = YES;
+                     }];
+    
+    
 }
 
 
