@@ -263,6 +263,19 @@
     }
 }
 
+//connect the Hint button
+-(void)setHud:(HUDView *)hud
+{
+    _hud = hud;
+    [hud.btnHelp addTarget:self action:@selector(actionHint) forControlEvents:UIControlEventTouchUpInside];
+}
+
+//the user pressed the hint button
+-(void)actionHint
+{
+    NSLog(@"Help!");
+}
+
 
 
 @end
