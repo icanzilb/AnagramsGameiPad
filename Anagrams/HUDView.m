@@ -15,7 +15,7 @@
 {
     //create the hud layer
     HUDView* hud = [[HUDView alloc] initWithFrame:r];
-    hud.userInteractionEnabled = NO;
+    hud.userInteractionEnabled = YES;
     
     //the stopwatch
     hud.stopwatch = [[StopwatchView alloc] initWithFrame: CGRectMake(kScreenWidth/2-150, 0, 300, 100)];
@@ -48,6 +48,21 @@
     [hud addSubview: hud.btnHelp];
     
     return hud;
+}
+
+-(id)hitTest:(CGPoint)point withEvent:(UIEvent *)event
+{
+    //1 let touches through and only catch the ones on buttons
+    UIView* hitView = (UIView*)[super hitTest:point withEvent:event];
+    
+    //2
+    if ([hitView isKindOfClass:[UIButton class]]) {
+        return hitView;
+    }
+    
+    //3
+    return nil;
+    
 }
 
 
