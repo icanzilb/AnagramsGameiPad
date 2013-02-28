@@ -13,6 +13,7 @@
 #import "AudioController.h"
 
 #import "HUDView.h"
+#import "GameData.h"
 
 @interface GameController : NSObject<TileDragDelegateProtocol>
 
@@ -22,6 +23,9 @@
 
 //the current level
 @property (strong, nonatomic) Level* level;
+//keep the score
+@property (strong, nonatomic) GameData* data;
+
 
 @property (strong, nonatomic) AudioController* audioController;
 

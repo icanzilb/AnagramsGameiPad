@@ -30,6 +30,9 @@
         //initialize
         self.audioController = [[AudioController alloc] init];
         [self.audioController preloadAudioEffects: kAudioEffectFiles];
+        
+        //initialize the game data
+        self.data = [[GameData alloc] init];
     }
     return self;
 }
@@ -124,6 +127,9 @@
             //more successful stuff to do
             [self.audioController playEffect: kSoundDing];
             
+            //give points
+            self.data.points += self.level.pointsPerTile;
+            
             //check for game end
             [self checkForSuccess];
             
@@ -141,6 +147,8 @@
             //more wrong stuff to do
             [self.audioController playEffect:kSoundWrong];
             
+            //take out points
+            self.data.points -= self.level.pointsPerTile/2;
         }
     }
     
