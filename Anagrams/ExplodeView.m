@@ -68,7 +68,14 @@
     
     _emitter.emitterCells = @[emitterCell];
     
+    [self performSelector:@selector(disableEmitterCell) withObject:nil afterDelay:0.1];
+    [self performSelector:@selector(removeFromSuperview) withObject:nil afterDelay:2.0];
     
+}
+
+-(void)disableEmitterCell
+{
+    [_emitter setValue:@0 forKeyPath:@"emitterCells.cell.birthRate"];
 }
 
 /*
