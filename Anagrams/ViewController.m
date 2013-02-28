@@ -12,7 +12,7 @@
 #import "GameController.h"
 #import "HUDView.h"
 
-@interface ViewController ()
+@interface ViewController () <UIActionSheetDelegate>
 @property (strong, nonatomic) GameController* controller;
 @end
 
@@ -54,7 +54,37 @@
 //show tha game menu on app start
 -(void)viewDidAppear:(BOOL)animated
 {
-    [super viewDidAppear:animated];
+	[super viewDidAppear:animated];
+    [self showLevelMenu];
+}
+
+#pragma mark - Game manu
+//show the level selector menu
+-(void)showLevelMenu
+{
+    UIActionSheet* action = [[UIActionSheet alloc] initWithTitle:@"Play @ difficulty level:"
+                                                        delegate:self
+                                               cancelButtonTitle:nil
+                                          destructiveButtonTitle:nil
+                                               otherButtonTitles:@"Easy-peasy", @"Challenge accepted" , @"I'm totally hard-core", nil];
+    [action showInView:self.view];
+}
+
+//level was selected, load it up and start the game
+-(void)actionSheet:(UIActionSheet *)actionSheet willDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    //1 check if the user tapped outside the menu
+    if (buttonIndex==-1) {
+        [self showLevelMenu];
+        return;
+    }
+    
+    //2 map index 0 to level 1, etc...
+    int levelNum = buttonIndex+1;
+    
+    //3 load the level, fire up the game
+    self.controller.level = [Level levelWithNum:levelNum];
+    [self.controller dealRandomAnagram];
 }
 
 @end
