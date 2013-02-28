@@ -11,6 +11,7 @@
 #import "TileView.h"
 #import "TargetView.h"
 #import "ExplodeView.h"
+#import "StarDustView.h"
 
 @implementation GameController
 {
@@ -203,6 +204,30 @@
     
     //stop the stopwatch
     [self stopStopwatch];
+    
+    //win animation
+    TargetView* firstTarget = _targets[0];
+    
+    int startX = 0;
+    int endX = kScreenWidth + 300;
+    int startY = firstTarget.center.y;
+    
+    StarDustView* stars = [[StarDustView alloc] initWithFrame:CGRectMake(startX, startY, 10, 10)];
+    [self.gameView addSubview:stars];
+    [self.gameView sendSubviewToBack:stars];
+    
+    [UIView animateWithDuration:3
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseOut
+                     animations:^{
+                         stars.center = CGPointMake(endX, startY);
+                     } completion:^(BOOL finished) {
+                         
+                         [stars removeFromSuperview];
+                         
+                         //game finished
+                         
+                     }];
     
 }
 
