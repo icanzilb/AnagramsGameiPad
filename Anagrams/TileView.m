@@ -63,7 +63,14 @@
 //4
 -(void)randomize
 {
+    //set random rotation of the tile
+    //anywhere between -0.2 and 0.3 radians
+    float rotation = randomf(0,50) / (float)100 - 0.2;
+    self.transform = CGAffineTransformMakeRotation( rotation );
     
+    //move randomly upwards
+    int yOffset = (arc4random() % 10) - 10;
+    self.center = CGPointMake(self.center.x, self.center.y + yOffset);
 }
 
 @end
