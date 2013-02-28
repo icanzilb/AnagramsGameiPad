@@ -10,6 +10,7 @@
 #import "config.h"
 #import "TileView.h"
 #import "TargetView.h"
+#import "ExplodeView.h"
 
 @implementation GameController
 {
@@ -179,6 +180,12 @@
                      animations:^{
                          tileView.transform = CGAffineTransformIdentity;
                      } completion:nil];
+    
+    ExplodeView* explode = [[ExplodeView alloc] initWithFrame:CGRectMake(tileView.center.x,tileView.center.y,10,10)];
+    [tileView.superview addSubview: explode];
+    [tileView.superview sendSubviewToBack:explode];
+    
+    
     
 }
 
