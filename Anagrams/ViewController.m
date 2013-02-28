@@ -8,6 +8,7 @@
 
 #import "config.h"
 #import "ViewController.h"
+#import "Level.h"
 
 @interface ViewController ()
 @end
@@ -18,6 +19,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    Level* level1 = [Level levelWithNum:1];
+    NSLog(@"anagrams: %@", level1.anagrams);
 }
 
 //show tha game menu on app start
