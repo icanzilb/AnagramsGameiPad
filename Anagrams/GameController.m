@@ -183,6 +183,7 @@
     
     //stop the stopwatch
     [self stopStopwatch];
+    
 }
 
 -(void)startStopwatch
